@@ -42,7 +42,6 @@ public class AcceptOrder {
     @Test
     @DisplayName("Check response body of /api/v1/orders/accept/:id with valid request")
     public void acceptOrder() {
-        //System.out.println(orderId);
         sendAcceptOrder(orderId, courierId)
                 .then().assertThat()
                 .body("ok", equalTo(true));

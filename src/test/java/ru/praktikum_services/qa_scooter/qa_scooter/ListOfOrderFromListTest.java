@@ -31,7 +31,6 @@ public class ListOfOrderFromListTest {
     @DisplayName("Check response of /api/v1/orders contains list of orders")
     public void getOrderList (){
         orders = sendGetOrdersList().body().as(ListOfOrders.class);
-        //System.out.println(orders.getOrders().get(0).getId());
         assertThat(orders.getOrders(), is(notNullValue()));
     }
 

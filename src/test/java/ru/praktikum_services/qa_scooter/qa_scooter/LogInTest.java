@@ -120,7 +120,6 @@ public class LogInTest {
     @Step("Send DELETE request to /api/v1/courier")
     public void sendDeleteCourier(String id) {
         Response response = given().header("Content-type", "application/json").delete(String.format("/api/v1/courier/%s", id));
-        //System.out.println(response.statusCode());
     }
 
     @After
